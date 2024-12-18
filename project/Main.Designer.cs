@@ -72,10 +72,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.pnlFood = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lbMedia = new System.Windows.Forms.ListBox();
-            this.btnAddMedia = new System.Windows.Forms.Button();
-            this.btnMediaList = new System.Windows.Forms.Button();
-            this.wmpMedia = new AxWMPLib.AxWindowsMediaPlayer();
             this.btnPay = new System.Windows.Forms.Button();
             this.btnBlock = new System.Windows.Forms.Button();
             this.lblName = new System.Windows.Forms.Label();
@@ -116,7 +112,6 @@
             this.gpbCategory.SuspendLayout();
             this.gpbFood.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.wmpMedia)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -244,8 +239,8 @@
             this.toolStripSeparator12,
             this.tmiAccount});
             this.tmiAdmin.Name = "tmiAdmin";
-            this.tmiAdmin.Size = new System.Drawing.Size(62, 20);
-            this.tmiAdmin.Text = "Quản trị";
+            this.tmiAdmin.Size = new System.Drawing.Size(60, 20);
+            this.tmiAdmin.Text = "Quản lý";
             this.tmiAdmin.Visible = false;
             // 
             // tmiCategory
@@ -441,9 +436,9 @@
             this.gpbCategory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.gpbCategory.Controls.Add(this.pnlCategory);
             this.gpbCategory.ForeColor = System.Drawing.Color.Black;
-            this.gpbCategory.Location = new System.Drawing.Point(786, 249);
+            this.gpbCategory.Location = new System.Drawing.Point(786, 31);
             this.gpbCategory.Name = "gpbCategory";
-            this.gpbCategory.Size = new System.Drawing.Size(401, 121);
+            this.gpbCategory.Size = new System.Drawing.Size(401, 127);
             this.gpbCategory.TabIndex = 3;
             this.gpbCategory.TabStop = false;
             this.gpbCategory.Text = "Danh mục";
@@ -456,7 +451,7 @@
             this.pnlCategory.AutoScroll = true;
             this.pnlCategory.Location = new System.Drawing.Point(7, 28);
             this.pnlCategory.Name = "pnlCategory";
-            this.pnlCategory.Size = new System.Drawing.Size(388, 87);
+            this.pnlCategory.Size = new System.Drawing.Size(388, 93);
             this.pnlCategory.TabIndex = 0;
             // 
             // gpbFood
@@ -470,9 +465,9 @@
             this.gpbFood.Controls.Add(this.label3);
             this.gpbFood.Controls.Add(this.pnlFood);
             this.gpbFood.ForeColor = System.Drawing.Color.Black;
-            this.gpbFood.Location = new System.Drawing.Point(786, 376);
+            this.gpbFood.Location = new System.Drawing.Point(786, 164);
             this.gpbFood.Name = "gpbFood";
-            this.gpbFood.Size = new System.Drawing.Size(401, 210);
+            this.gpbFood.Size = new System.Drawing.Size(401, 422);
             this.gpbFood.TabIndex = 4;
             this.gpbFood.TabStop = false;
             this.gpbFood.Text = "Danh sách món";
@@ -518,7 +513,7 @@
             this.pnlFood.AutoScroll = true;
             this.pnlFood.Location = new System.Drawing.Point(7, 81);
             this.pnlFood.Name = "pnlFood";
-            this.pnlFood.Size = new System.Drawing.Size(388, 123);
+            this.pnlFood.Size = new System.Drawing.Size(388, 335);
             this.pnlFood.TabIndex = 0;
             // 
             // groupBox1
@@ -526,10 +521,6 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.BackColor = System.Drawing.Color.Silver;
-            this.groupBox1.Controls.Add(this.lbMedia);
-            this.groupBox1.Controls.Add(this.btnAddMedia);
-            this.groupBox1.Controls.Add(this.btnMediaList);
-            this.groupBox1.Controls.Add(this.wmpMedia);
             this.groupBox1.Controls.Add(this.btnPay);
             this.groupBox1.Controls.Add(this.btnBlock);
             this.groupBox1.Controls.Add(this.lblName);
@@ -544,58 +535,9 @@
             this.groupBox1.Controls.Add(this.btnAddFood);
             this.groupBox1.Location = new System.Drawing.Point(397, 31);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(790, 196);
+            this.groupBox1.Size = new System.Drawing.Size(383, 196);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
-            // 
-            // lbMedia
-            // 
-            this.lbMedia.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbMedia.FormattingEnabled = true;
-            this.lbMedia.ItemHeight = 17;
-            this.lbMedia.Location = new System.Drawing.Point(376, 16);
-            this.lbMedia.Name = "lbMedia";
-            this.lbMedia.Size = new System.Drawing.Size(368, 174);
-            this.lbMedia.TabIndex = 50;
-            this.lbMedia.Visible = false;
-            this.lbMedia.SelectedIndexChanged += new System.EventHandler(this.lbMedia_SelectedIndexChanged);
-            // 
-            // btnAddMedia
-            // 
-            this.btnAddMedia.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddMedia.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddMedia.BackgroundImage")));
-            this.btnAddMedia.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnAddMedia.Location = new System.Drawing.Point(750, 66);
-            this.btnAddMedia.Name = "btnAddMedia";
-            this.btnAddMedia.Size = new System.Drawing.Size(37, 39);
-            this.btnAddMedia.TabIndex = 49;
-            this.btnAddMedia.UseVisualStyleBackColor = true;
-            this.btnAddMedia.Click += new System.EventHandler(this.btnAddMedia_Click);
-            // 
-            // btnMediaList
-            // 
-            this.btnMediaList.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMediaList.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMediaList.BackgroundImage")));
-            this.btnMediaList.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnMediaList.Location = new System.Drawing.Point(750, 24);
-            this.btnMediaList.Name = "btnMediaList";
-            this.btnMediaList.Size = new System.Drawing.Size(37, 36);
-            this.btnMediaList.TabIndex = 48;
-            this.btnMediaList.UseVisualStyleBackColor = true;
-            this.btnMediaList.Click += new System.EventHandler(this.btnMedia_Click);
-            // 
-            // wmpMedia
-            // 
-            this.wmpMedia.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.wmpMedia.Enabled = true;
-            this.wmpMedia.Location = new System.Drawing.Point(376, 24);
-            this.wmpMedia.Name = "wmpMedia";
-            this.wmpMedia.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("wmpMedia.OcxState")));
-            this.wmpMedia.Size = new System.Drawing.Size(368, 165);
-            this.wmpMedia.TabIndex = 46;
             // 
             // btnPay
             // 
@@ -999,7 +941,6 @@
             this.gpbFood.ResumeLayout(false);
             this.gpbFood.PerformLayout();
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.wmpMedia)).EndInit();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -1090,10 +1031,6 @@
         private System.Windows.Forms.ToolStripMenuItem tsmInTT;
         private System.Windows.Forms.Label txtTotal;
         private System.Windows.Forms.OpenFileDialog ofdMedia;
-        private AxWMPLib.AxWindowsMediaPlayer wmpMedia;
-        private System.Windows.Forms.Button btnMediaList;
-        private System.Windows.Forms.Button btnAddMedia;
-        private System.Windows.Forms.ListBox lbMedia;
 
         public System.Windows.Forms.MouseEventHandler txtNameMan_MouseClick { get; set; }
     }

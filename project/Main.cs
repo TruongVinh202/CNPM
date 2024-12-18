@@ -598,40 +598,14 @@ namespace project
 
         //     Media
         string [] filenames, filepaths;
-        private void btnAddMedia_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (ofdMedia.ShowDialog() == DialogResult.OK)
-                {
-                    //Mang file name se chua tat ca ten
-                    filenames = ofdMedia.SafeFileNames;
-                    //Mang file path se chua tat ca duong dan file
-                    filepaths = ofdMedia.FileNames;
-                    //Them file name vao listview
-                    lbMedia.Items.Clear();
-                    foreach (String file in filenames)
-                    {
-                        lbMedia.Items.Add(file);
-                    }
-                }
-            }
-            catch { }
-        }
-        private void lbMedia_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                wmpMedia.URL = filepaths[lbMedia.SelectedIndex];
-            }
-            catch
-            { }
-        }
+        
 
         private void frmMain_Load(object sender, EventArgs e)
         {
 
         }
+
+
 
         private void txtNameMan_Click(object sender, EventArgs e)
         {
@@ -640,21 +614,6 @@ namespace project
 
 
 
-        //Dong mo danh sach nhac
-        private void btnMedia_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (lbMedia.Visible == true)
-                {
-                    lbMedia.Visible = false;
-                }
-                else
-                {
-                    lbMedia.Visible = true;
-                }
-            }
-            catch { }
-        }
+       
     }
 }

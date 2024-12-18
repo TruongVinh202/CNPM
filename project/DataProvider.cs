@@ -16,7 +16,7 @@ namespace project
         {
             try
             {
-                connection.ConnectionString = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\OS\source\repos\DoAn\project\QL_QUANCAFE.mdf; Integrated Security = True";
+                connection.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\OS\source\repos\QuanLy_CF\project\QL_QUANCAFE.mdf;Integrated Security=True";
                 connection.Open();
             }
             catch { }
